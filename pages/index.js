@@ -87,7 +87,7 @@ class App extends React.Component {
                 margin="medium"
                 hoverIndicator
                 primary
-                href="https://github.com/joshkmartinez/"
+                href="https://github.com/joshkmartinez/Pi-as-a-Service"
               />
             </Box>
             <Box
