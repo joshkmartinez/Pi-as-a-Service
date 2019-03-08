@@ -173,7 +173,7 @@ I don't know.
 const example = `
 ### Check this out!
 Its really easy to get started. No fancy-shmacy API keys.
-Just send a \`GET\` request to one of the *many domains*  
+Just send a \`GET\` request to \`pi.now.sh/api\`
 **Look at this example in javascript:**  
 `
 const request = `
@@ -197,11 +197,12 @@ const docs = `
 ## Endpoints:
 **\`/api/p?n=x\`**  
 - This will return \`x\` decimals of pi. If n is not defined 9 digits of pi will be returned.  
-- Alias endpoints: **\`api/pie\`** *&* **\`api/pi\`**
+- Alias endpoints: **\`/api/pie\`** *&* **\`/api/pi\`**
 `
 const domains = `
 ## Domains:
-This service is available at all of the following domains.  
+This service is available at all of the following domains.
+The api is available at \`/api\`  
 [pi.now.sh](https://pi.now.sh)  
 [paas.now.sh](https://paas.now.sh)  
 [piAsAService.now.sh](https://piAsAService.now.sh)  
