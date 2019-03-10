@@ -17,14 +17,22 @@ api.get(['/pi', '/pie', '/p'], (req, res) => {
   const { n = 9 } = query
   res.end(PI(n))
 })
-api.get(['/hello', '/hi'], (req, res) => {
+api.get(['/hello', '/hi', '/hoi'], (req, res) => {
   res.send('hi')
 })
-api.get(['/ping', '/pong'], (req, res) => {
+api.get(['/ping', '/pong', '/up'], (req, res) => {
   res.send('pong')
 })
 api.get('/', (req, res) => {
-  res.send('This is the Pi as a Service (PaaS) API')
+  res.send(
+    `
+    This is the Pi as a Service (PaaS) API\n\n
+    Send a GET request to /api/p\n
+    To get x decimals of pi do this: /api/p?n=x\n
+
+    e.g. GET pi.now.sh/p?n=50
+    `
+  )
 })
 app.use('/api', api)
 app.listen(3000, () => {

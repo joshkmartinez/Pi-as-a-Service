@@ -171,7 +171,7 @@ To many? [How about 1 *million* ?](https://pi.now.sh/api/p?n=1000000)
 const example = `
 ### Check this out!
 Its really easy to get started. No fancy-shmacy API keys or authentication.  
-Just send a \`GET\` request to \`pi.now.sh/api\`  
+Just send a \`GET\` request to \`pi.now.sh/api/p\`  
 **Take a look:**  
 `
 const request = `
