@@ -120,17 +120,15 @@ class App extends React.Component {
               </Box>
             </Box>
             <Box
-              direction="row-responsive"
-              pad="small"
+              direction="row"
               align="center"
               alignContent="center"
               animation="zoomIn"
-              basis="full"
             >
-              <Box pad="medium" basis="1/2" align="center">
+              <Box pad="medium" basis="1/2" align="center" width="medium">
                 <Markdown>{request}</Markdown>
               </Box>
-              <Box pad="medium" basis="1/2" align="center">
+              <Box basis="1/2" align="center" width="medium">
                 <Markdown>{response}</Markdown>
                 <Text>{this.state.pi}</Text>
               </Box>
@@ -142,7 +140,7 @@ class App extends React.Component {
               animation="zoomIn"
               basis="1"
             >
-              <Box pad="medium" basis="1/2" align="center">
+              <Box pad="medium" basis="1/2" width="medium" align="center">
                 <Markdown>{docs}</Markdown>
               </Box>
               <Box pad="medium" basis="1/2" align="center">
@@ -158,45 +156,37 @@ class App extends React.Component {
 
 const p1 = `
 ### About  
-Pi as a Service, or **Paas**, is an API that returns *\`x\`* decimals of **π**
+Pi as a Service, or **PaaS**, is an API that returns *\`x\`* decimals of **π**
 `
 const p2 = `
 ### Simple as can be  
-The Paas API is super easy to use. Check out the example below.
+The PaaS API is super easy to use. Check out the example below.
 `
 const p3 = `
 ### What would this be used for?
 I don't know.  
 [You want a *billion* digits of π ?](https://pi.now.sh/api/p?n=1000000000)  
-[How about 1 *million* ?](https://pi.now.sh/api/p?n=1000000)
+To many? [How about 1 *million* ?](https://pi.now.sh/api/p?n=1000000)
 `
 const example = `
 ### Check this out!
-Its really easy to get started. No fancy-shmacy API keys.
-Just send a \`GET\` request to \`pi.now.sh/api\`
-**Look at this example in javascript:**  
+Its really easy to get started. No fancy-shmacy API keys or authentication.  
+Just send a \`GET\` request to \`pi.now.sh/api\`  
+**Take a look:**  
 `
 const request = `
-\`\`\`
-var data = null
-var xhr = new XMLHttpRequest()
-xhr.addEventListener('readystatechange', function() {
-  if (this.readyState === this.DONE) {
-    console.log(this.responseText)
-  }
-})
-xhr.open('GET', 'https://pi.now.sh/api/p?n=9')
-xhr.send(data)
-
-\`\`\`
+#### Request:  
+**GET** \`/p?n=9\`
 `
 const response = `
-#### Response:
+#### Response:  
 `
 const docs = `
 ## Endpoints:
-**\`/api/p?n=x\`**  
-- This will return \`x\` decimals of pi. If n is not defined 9 digits of pi will be returned.  
+**GET**   **\`/api/p?n=x\`**  
+- This will return \`x\` decimals of pi.  
+- If n is not defined 9 decimals of pi will be returned.  
+- If n is a negative number no decimals will be returned. In other words, \`3\` is returned.  
 - Alias endpoints: **\`/api/pie\`** *&* **\`/api/pi\`**
 `
 const domains = `
