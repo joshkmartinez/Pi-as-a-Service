@@ -8,11 +8,12 @@
     "dev": "next",
     "dev:api": "nodemon api/api.js",
     "build": "next build",
+    "deploy": "now",
+    "postdeploy": "now alias",
     "start": "next start",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "deploy": "now",
-    "postdeploy": "now alias"
+    "export": "next export"
   },
   "keywords": [],
   "author": "",
