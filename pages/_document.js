@@ -35,6 +35,10 @@ export default class extends Document {
             href="https://fonts.googleapis.com/css?family=Roboto"
             rel="stylesheet"
           />
+          <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.css"
+          />
         </Head>
         <body>
           <Main />
