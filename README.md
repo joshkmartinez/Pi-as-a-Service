@@ -3,7 +3,7 @@
 ## [pi.now.sh](https://pi.now.sh)
 
 ### What would this be used for?
-I actually have no idea.
+To find x decimals of π.
 
 # Usage:
 Send a GET request to [pi.now.sh/api/p?n=45](https://pi.now.sh/api/p?n=45)  
